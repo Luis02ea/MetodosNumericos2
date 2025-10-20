@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="Actividad2/Actividad2.csproj" />
+  <Project Path="Actividad3/Actividad3.csproj" />
+  <Project Path="Actividad4/Actividad4.csproj" />
+  <Project Path="Actividad5/Actividad5.csproj" />
+  <Project Path="MetodosNumericos2/Actividad1.csproj" />
+  <Project Path="Tarea2/Tarea2.csproj" />
+  <Project Path="Tarea3/Tarea3.csproj" />
+  <Project Path="Tarea5/Tarea5.csproj" />
+</Solution>

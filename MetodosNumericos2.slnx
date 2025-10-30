@@ -1,9 +1,13 @@
 <Solution>
+  <Project Path="Actividad11/Actividad11.csproj" Id="3b523d2d-555d-43fe-bbcc-7a1d20a243df" />
   <Project Path="Actividad2/Actividad2.csproj" />
   <Project Path="Actividad3/Actividad3.csproj" />
   <Project Path="Actividad4/Actividad4.csproj" />
   <Project Path="Actividad5/Actividad5.csproj" />
+  <Project Path="Evidencia1/Evidencia1.csproj" Id="54ac70cf-c0fb-446f-80b3-bf75c22795b5" />
+  <Project Path="Evidencia2/Evidencia2.csproj" Id="c3846c9d-d406-44bd-841e-3e34431462ba" />
   <Project Path="MetodosNumericos2/Actividad1.csproj" />
+  <Project Path="Tarea1/Tarea1.csproj" Id="0c09bb7b-1752-4b24-9b91-b8dae608efe5" />
   <Project Path="Tarea2/Tarea2.csproj" />
   <Project Path="Tarea3/Tarea3.csproj" />
   <Project Path="Tarea5/Tarea5.csproj" />

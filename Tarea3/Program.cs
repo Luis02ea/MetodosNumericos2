@@ -1,61 +1,104 @@
-﻿//Aqui empieza
-using System;
-using System.Collections.Generic;
+﻿using System;
 
-namespace MetodosNumericos
+public class M
 {
-
-
-    class Tarea3
+    public static void Main(string[] a)
     {
-        static void Main()
+        bool b = true;
+
+        while (b)
         {
-            Console.WriteLine("¿Cuántos estados de la república mexicana conoces o has visitado en tu vida?");
-            int cantidadEstados = int.Parse(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine("MENU PRINCIPAL");
+            Console.WriteLine("1. Sumar renglones de una matriz 2x3");
+            Console.WriteLine("2. Buscar nombre en una lista");
+            Console.WriteLine("3. Salir");
+            Console.Write("Opcion: ");
 
+            string c = Console.ReadLine();
 
-            List<List<string>> lugaresVisitados = new List<List<string>>();
-            List<List<string>> anecdotas = new List<List<string>>();
-
-            for (int i = 0; i < cantidadEstados; i++)
+            switch (c)
             {
-                Console.WriteLine($"Ingresa el nombre del estado {i + 1}:");
-                string estado = Console.ReadLine();
-
-                Console.WriteLine($"¿Cuántos lugares has visitado en {estado}?");
-                int cantidadLugares = int.Parse(Console.ReadLine());
-
-
-                List<string> lugares = new List<string>();
-                List<string> anecdotasEstado = new List<string>();
-
-                for (int j = 0; j < cantidadLugares; j++)
-                {
-                    Console.WriteLine($"Ingresa el nombre del lugar {j + 1} en {estado}:");
-                    string lugar = Console.ReadLine();
-                    lugares.Add(lugar);
-
-                    Console.WriteLine($"Cuenta una anécdota que recuerdes de {lugar}:");
-                    string anecdota = Console.ReadLine();
-                    anecdotasEstado.Add(anecdota);
-                }
-
-                lugaresVisitados.Add(lugares);
-                anecdotas.Add(anecdotasEstado);
+                case "1":
+                    P1();
+                    break;
+                case "2":
+                    P2();
+                    break;
+                case "3":
+                    b = false;
+                    Console.WriteLine("Fin del programa.");
+                    break;
+                default:
+                    Console.WriteLine("Opcion no valida. Intenta otra vez.");
+                    break;
             }
 
-            Console.WriteLine("\nResumen de tus visitas y anécdotas:");
-            for (int i = 0; i < cantidadEstados; i++)
+            if (b)
             {
-                Console.WriteLine($"\nEn el estado {i + 1}:");
-                for (int j = 0; j < lugaresVisitados[i].Count; j++)
-                {
-                    Console.WriteLine($"- Visitaste {lugaresVisitados[i][j]} y recuerdas: \"{anecdotas[i][j]}\"");
-                }
+                Console.WriteLine("\nPresiona Enter para volver al menu...");
+                Console.ReadLine();
             }
         }
     }
 
-}
+    public static void P1()
+    {
+        Console.Clear();
 
-//Aqui termina
+        int[,] a = new int[2, 3];
+
+        Console.WriteLine("Programa 1: Suma de renglones de una matriz 2x3");
+        Console.WriteLine("Introduce los 6 numeros de la matriz.");
+
+        for (int b = 0; b < 2; b++)
+        {
+            for (int c = 0; c < 3; c++)
+            {
+                Console.Write($"Valor para renglon {b + 1}, columna {c + 1}: ");
+                a[b, c] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        int d = a[0, 0] + a[0, 1] + a[0, 2];
+        int e = a[1, 0] + a[1, 1] + a[1, 2];
+
+        Console.WriteLine("\nResultados:");
+        Console.WriteLine("Renglon 1: " + d);
+        Console.WriteLine("Renglon 2: " + e);
+    }
+
+    public static void P2()
+    {
+        Console.Clear();
+
+        string[] a = { "Juan", "Gabriela", "Franco", "Mara", "Violeta" };
+
+        Console.WriteLine("Programa 2: Busqueda de nombres");
+
+        Console.Write("Escribe un nombre para buscar: ");
+        string b = Console.ReadLine();
+
+        bool c = false;
+        int d = -1;
+
+        for (int e = 0; e < a.Length; e++)
+        {
+            if (a[e].Equals(b, StringComparison.OrdinalIgnoreCase))
+            {
+                c = true;
+                d = e;
+                break;
+            }
+        }
+
+        if (c)
+        {
+            Console.WriteLine("Nombre encontrado en la posicion: " + d);
+        }
+        else
+        {
+            Console.WriteLine("Nombre no encontrado en la lista.");
+        }
+    }
+}
